@@ -1,6 +1,6 @@
 https://bb.cruzeirodosulvirtual.com.br
 
-**DESENVOLVIMENTO WEB BÁSICO**
+# **DESENVOLVIMENTO WEB BÁSICO**
 
 	Professora Adriana Bastos da Costa
 
@@ -8,12 +8,12 @@ https://bb.cruzeirodosulvirtual.com.br
 
 	Carga horária (Horas-aula): 60h
 
-**Ementa:**
+## **Ementa:**
 
     Prática do desenvolvimento Web básico. Ferramentas e linguagens de programação e marcação para criar
     páginas Web.
 
-**Objetivos:**
+## **Objetivos:**
 
     ▪ Aplicar conceitos, métodos, técnicas através de ferramentas para o desenvolvimento de sistemas 
     web utilizando linguagens de programação para demonstração conceitual e aplicada aos contextos de mercado 
@@ -21,9 +21,9 @@ https://bb.cruzeirodosulvirtual.com.br
     informação nas organizações a fim de adequá-las às oportunidades de mudança. Desenvolver projetos de 
     software com a utilização de frameworks, garantindo a resolução algorítmica de problemas.
 
-Temos aulas todas as **QUARTAS** na **Sala 304**.
+## Temos aulas todas as **QUARTAS** na **Sala 304**.
 
-**Datas Importantes:**
+## **Datas Importantes:**
 
     22/nov - Avaliação A1.
 
