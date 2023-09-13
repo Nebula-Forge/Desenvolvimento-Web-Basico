@@ -1,0 +1,8 @@
+HTML, ou HyperText Markup Language (Linguagem de Marcação de Hipertexto), é uma linguagem de marcação usada para criar e estruturar conteúdo na web. Foi desenvolvida como a linguagem padrão para criar páginas da web e é usada para definir a estrutura, o layout e o significado do conteúdo em um documento. HTML permite que você organize e apresente informações, imagens, links e outros elementos multimídia de forma coerente e consistente em navegadores da web.
+
+CSS, sigla para "Cascading Style Sheets" (Folhas de Estilo em Cascata), é uma linguagem de estilo usada para controlar a apresentação visual e o layout de páginas web. 
+
+O CSS trabalha em conjunto com o HTML (Hypertext Markup Language) para definir como os elementos HTML devem ser exibidos no navegador.
+
+O principal objetivo do CSS é separar o conteúdo da estrutura e da apresentação de uma página web. 
+Isso significa que, em vez de colocar estilos diretamente no código HTML, você pode criar regras CSS separadas que descrevem como os elementos HTML devem ser formatados, posicionados e estilizados.
