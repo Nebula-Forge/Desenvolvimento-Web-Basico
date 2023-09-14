@@ -1,0 +1,22 @@
+header{
+    background-color: rgb(17, 225, 240);
+    padding: 10px 0;
+    text-align: center;
+}
+
+p{
+    color: #fff;
+}
+
+nav button{
+    background-color:rgb(255, 145, 0);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button.active{
+background-color: rgb(136, 67, 2);
+}
