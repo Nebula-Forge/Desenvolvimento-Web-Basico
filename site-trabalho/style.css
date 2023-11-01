@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #542E71 ,#E90064 );
+    font-family: 'Poppins', sans-serif;
+}
+
+.header
+{
+    min-height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+nav
+{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img
+{
+    width: 140px;
+}
+
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+    z-index: 1;
+}
+
+.nav-links ul li
+{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a
+{
+    color: #F8DE22;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #F94C10;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after
+{
+    background: #F94C10;
+    width: 100%;
+}
+
+.text-box
+{
+    width: 100%;
+    color:#FB3640;
+    position: absolute;
+    top: 20%;
+    left: 48%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1
+{
+    font-size: 62px;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #F8DE22;
+    border: 1px solid #F8DE22;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    /* On hover, change border color, background color */
+    border: 1px solid #F8DE22;
+    background: #fff;
+    
+    /* Smoothly transition changes */
+    transition: 1s;
+}
+
+/*------ PRODUTOS ------*/
+.produtos /* center alignment */
+{
+    width: 95%; /* set width */
+    text-align: left; /* align text center */
+    padding: 30px; /* set padding around elements */
+}
+
+h1 {
+    color: #FB3640;
+    font-size: 30px;
+}
+
+.lista-de-produtos{
+    max-height: 500px; /* Defina a altura desejada para a lista de produtos */
+    overflow-x: auto; /* Isso permitirá a rolagem vertical conforme necessário */
+    white-space: nowrap; /* Impede que os itens da lista sejam quebrados em linhas separadas */
+    scrollbar-width: thin;
+    scrollbar-color: #244235 #ffffff;
+}
+
+.lista-de-produtos::-webkit-scrollbar {
+    height: 6px !important; /* Altura mais fina da barra de rolagem */
+}
+
+.lista-de-produtos::-webkit-scrollbar-track {
+    background: #f2f2f2; /* Cor do fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Raio da borda da pista da barra de rolagem */
+}
+
+.lista-de-produtos::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9; /* Cor da barra de rolagem */
+    border-radius: 10px; /* Raio da borda da barra de rolagem */
+}
+
+/* Estilização da barra de rolagem para outros navegadores */
+.lista-de-produtos::-webkit-scrollbar {
+    height: 6px !important; /* Altura mais fina da barra de rolagem */
+}
+
+.lista-de-produtos::-webkit-scrollbar-track {
+    background: #f2f2f2; /* Cor do fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Raio da borda da pista da barra de rolagem */
+}
+
+.lista-de-produtos::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9; /* Cor da barra de rolagem */
+    border-radius: 10px; /* Raio da borda da barra de rolagem */
+}
+
+.row
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*PRODUTOS-ITEMS*/
+.produtos-item {
+    border: 2px solid #542E71;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 210px;
+    text-align: center;
+    background-color: #A799B7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.produtos-item img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/*Nome do produto*/
+.produtos-item h3 {
+    color: #0066ff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.produtos-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.adicionar-ao-carrinho-botao {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*------ FILIAIS ------*/
+.filiais {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.filiais h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #FF5200;
+    margin-bottom: 30px;
+}
+
+.filiais-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.filiais-item {
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.filiais-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.filiais-info {
+    margin-top: 20px;
+}
+
+.filiais-info h3 {
+    color: #FFF600;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.filiais-info p {
+    color: #FFF600;
+    font-size: 16px;
+}
