@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login e Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/style.login.cadastro.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="assets/logo.jpg"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="Pag1.html">INÍCIO</a></li>
+                    <li><a href="Pag1.html">CONTATO</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="cadastro-login-container">
+            <div class="login" id="login-section">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Usuário" required>
+                    <input type="password" placeholder="Senha" required>
+                    <input type="submit" value="Entrar">
+                </form>
+                <p>
+                    <a href="javascript:void(0);" onclick="showSignup()">Ainda não possui uma conta? Cadastre-se!</a>
+                </p>
+            </div>
+            <div class="signup" id="signup-section">
+                <h2>Cadastro de Novos Usuários</h2>
+                <form>
+                    <input type="text" placeholder="Nome Completo" required>
+                    <input type="text" placeholder="CPF" required>
+                    <input type="tel" placeholder="Telefone" required>
+                    <input type="text" placeholder="Outras Informações Relevantes">
+                    <input type="submit" value="Cadastrar">
+                </form>
+                <p>
+                    <a href="javascript:void(0);" onclick="showLogin()">Já possui uma conta? Faça login!</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
