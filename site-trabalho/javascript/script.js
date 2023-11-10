@@ -43,3 +43,36 @@ function showSignup() {
     document.getElementById("login-section").style.display = "none";
     document.getElementById("signup-section").style.display = "block";
 }
+
+function enviarFormulario(url, formData) {
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Resposta do servidor:', data);
+        // Adicione aqui lógica para lidar com a resposta do servidor, se necessário
+    })
+    .catch(error => {
+        console.error('Erro na requisição:', error);
+        // Adicione aqui lógica para lidar com erros, se necessário
+    });
+}
+
+// Event listener para o formulário de login
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    enviarFormulario('http://10.131.32.132:8080/login', formData);
+});
+
+// Event listener para o formulário de cadastro
+document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    enviarFormulario('http://10.131.32.132:8080/cadastrar', formData);
+});
