@@ -44,6 +44,19 @@ function showSignup() {
     document.getElementById("signup-section").style.display = "block";
 }
 
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    enviarFormulario('http://10.131.32.132:8080/login', formData);
+});
+
+// Event listener para o formulário de cadastro
+document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    enviarFormulario('http://10.131.32.132:8080/cadastrar', formData);
+});
+
 function enviarFormulario(url, formData) {
     fetch(url, {
         method: 'POST',
@@ -62,17 +75,3 @@ function enviarFormulario(url, formData) {
         // Adicione aqui lógica para lidar com erros, se necessário
     });
 }
-
-// Event listener para o formulário de login
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var formData = new FormData(this);
-    enviarFormulario('http://10.131.32.132:8080/login', formData);
-});
-
-// Event listener para o formulário de cadastro
-document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var formData = new FormData(this);
-    enviarFormulario('http://10.131.32.132:8080/cadastrar', formData);
-});
