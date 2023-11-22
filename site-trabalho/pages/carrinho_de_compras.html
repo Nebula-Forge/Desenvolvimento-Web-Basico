@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carrinho de Compras</title>
+        
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body class="carrinho_de_compras">
+        <script src="../javascript/script.js"></script>    
+        <!-- Seção do header -->
+        <section class="cabeçalho">
+            <!-- Navegação do site -->
+            <nav>
+                <a href="index.html"><img src="../assets/icons/logo.jpg"></a>
+                <div class="barra_de_pesquisa">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="button">
+                        <img src="../assets/icons/lupa.png" alt="PERFIL">
+                    </button>
+                </div>
+                <div class="barra_de_navegação">
+                    <!-- Lista de links de navegação -->
+                    <ul>
+                        <li>
+                            <a href="Primeira Pagina.html">CATEGORIAS</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.login.html#login">
+                                <button type="button">
+                                    <img src="../assets/icons/user.jpg" alt="PERFIL">
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="carrinho_de_compras.html">
+                                <button type="button">
+                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="CARRINHO">
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section> 
+
+        <div class="cart">
+            <div class="cart-header">
+                <h2>Itens no Carrinho</h2>
+            </div>
+    
+            <div class="cart-items">
+                <div class="item">
+                    <img src="../assets/produtos/roupas/moletom_prive_the_zipper_preto.webp" alt="Item1">
+                    <div class="item-name">MOLETOM PRIVÊ THE ZIPPER PRETO</div>
+                    <div class="item-price">R$ 499,90</div>
+                </div>
+                <div class="item">
+                    <img src="../assets/produtos/shapes/shape_element_hatched_red_blue.webp" alt="Item2">
+                    <div class="item-name">SHAPE ELEMENT HATCHED RED BLUE</div>
+                    <div class="item-price">R$ 399,90</div>
+                </div>
+            </div>
+    
+            <div class="cart-total">
+                Total: R$ 0,00
+            </div>
+    
+            <a href="index.html" class="checkout-btn">Finalizar Compra</a>
+        </div>
+
+        <script>
+            window.onload = function() {
+                calcularTotal();
+            };
+        </script>
+    </body>
+</html>

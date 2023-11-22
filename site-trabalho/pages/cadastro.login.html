@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro|Login</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="pagina-login">
+    <!-- Seção do header -->
+    <section class="cabeçalho">
+        <!-- Navegação do site -->
+        <nav>
+            <a href="index.html"><img src="../assets/icons/logo.jpg"></a>
+            <div class="barra_de_navegação">
+                <!-- Lista de links de navegação -->
+                <ul>
+                    <li>
+                        <a href="Primeira Pagina.html">CATEGORIAS</a>
+                    </li>
+                    <li>
+                        <a href="cadastro.login.html#login">
+                            <button type="button">
+                                <img src="../assets/icons/user.jpg" alt="PERFIL">
+                            </button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="carrinho_de_compras.html">
+                            <button type="button">
+                                <img src="../assets/icons/carrinho_de_compras.jpg" alt="CARRINHO">
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section> 
+
+    <section class="login_cadastro_form">
+        <div id="cadastro-login-container">
+            <div class="login" id="login-section">
+                <h2>Login</h2>
+                <form id="loginForm" onsubmit="return redirectToIndex()">
+                    <input type="text" name="Usuário" placeholder="Usuário" required>
+                    <input type="password" name="Senha" placeholder="Senha" required>
+                    <input type="submit" value="Entrar">
+                </form>
+                <p>
+                    <a href="javascript:void(0);" onclick="showSignup()">Ainda não possui uma conta? Cadastre-se!</a>
+                </p>
+            </div>
+    
+            <div class="signup" id="signup-section">
+                <h2>Cadastro de Novos Usuários</h2>
+                <form id="cadastroForm">
+                    <input type="text" name="NomeCompleto" placeholder="Nome Completo" required>
+                    <input type="text" name="CPF" placeholder="CPF" required>
+                    <input type="tel" name="Telefone" placeholder="Telefone" required>
+                    <input type="text" name="Email" placeholder="E-mail" required>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <input type="submit" value="Cadastrar">
+                </form>
+                <p>
+                    <a href="javascript:void(0);" onclick="showLogin()">Já possui uma conta? Faça login!</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="../javascript/script.js"></script>
+    <script>
+        // Esse trecho faz mostrar apenas o login ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+            showLogin();
+        });
+    </script>
+</body>
+
+</html>

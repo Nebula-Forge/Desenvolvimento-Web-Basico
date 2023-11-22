@@ -1,0 +1,150 @@
+|<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Definições básicas -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ollie POP Shop</title>
+
+        <!-- Immportação do arquivo CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Importação da fonte Poppins do Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Seção do header -->
+        <section class="cabeçalho">
+            <!-- Navegação do site -->
+            <nav>
+                <img src="../assets/icons/logo.jpg">
+                <div class="barra_de_pesquisa">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="button">
+                        <img src="../assets/icons/lupa.png" alt="PERFIL">
+                    </button>
+                </div>
+                <div class="barra_de_navegação">
+                    <!-- Lista de links de navegação -->
+                    <ul>
+                        <li>
+                            <a href="Primeira Pagina.html">CATEGORIAS</a>
+                        </li>
+                        <li>
+                            <a href="cadastro.login.html#login">
+                                <button type="button">
+                                    <img src="../assets/icons/user.jpg" alt="PERFIL">
+                                </button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="carrinho_de_compras.html">
+                                <button type="button">
+                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="CARRINHO">
+                                </button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section> 
+        
+        <!-- Seção dos destaques -->
+        <section class="destaques">
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_1.webp" alt="destaque_1">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_2.webp" alt="destaque_2">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_3.webp" alt="destaque_3">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_4.webp" alt="destaque_4">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_5.webp" alt="destaque_5">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_6.webp" alt="destaque_6">
+                    </div>
+                    <div class="slide">
+                        <img src="../assets/destaques/destaque_exemplo_7.webp" alt="destaque_7">
+                    </div>
+                </div>
+                <div class="indicadores"></div>
+            </div>
+        </section>
+        
+        <div class="categorias_div">
+            <h1>CATEGORIAS</h1>
+        </div>
+
+        <section class="categorias">
+            <div class="categorias-container">
+                <div class="categoria" id="categoria_roupas">
+                    <img src="../assets/categorias/categoria_roupas.jpg" alt="Roupas">
+                    <div class="conteudo">
+                        <h1>ROUPAS</h1>
+                    </div>
+                </div>
+                <div class="categoria" id="categoria_shapes">
+                    <img src="../assets/categorias/categoria_shapes.jpg" alt="Shapes">
+                    <div class="conteudo">
+                        <h1>SHAPES</h1>
+                    </div>
+                </div>
+                <div class="categoria" id="categoria_tenis">
+                    <img src="../assets/categorias/categoria_tenis.jpg" alt="Tênis">
+                    <div class="conteudo">
+                        <h1>TÊNIS</h1>
+                    </div>
+                </div>
+                <div class="categoria" id="categoria_bones">
+                    <img src="../assets/categorias/categoria_bones.jpg" alt="Bonés">
+                    <div class="conteudo">
+                        <h1>BONÉS</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="filiais">
+            <h1>NOSSAS FILIAIS</h1>
+            <!-- Container de filiais -->
+            <div class="filiais-container">
+                <!-- Item de filial -->
+                <div class="filiais-item">
+                    <img src="../assets/filiais/filial_curitiba.webp" alt="Filiais Curitiba">
+                    <div class="filiais-info">
+                        <h3>Curitiba</h3>
+                        <p>Avenida Cândido de Abreu, 776 - Centro Cívico, Curitiba - PR, 80530-000, Brasil</p>
+                    </div>
+                </div>
+        
+                <div class="filiais-item">
+                    <img src="../assets/filiais/filial_são_josé_dos_pinhais.jpg" alt="Filiais São José dos Pinhais">
+                    <div class="filiais-info">
+                        <h3>São José dos Pinhais</h3>
+                        <p>Rua XV de Novembro, 1755 - Centro, São José dos Pinhais - PR, 83005-000, Brasil</p>
+                    </div>
+                </div>
+        
+                <div class="filiais-item">
+                    <img src="../assets/filiais/filial_centro_civico.webp" alt="Filiais Centro Cívico">
+                    <div class="filiais-info">
+                        <h3>Centro Cívico</h3>
+                        <p>Rua Cândido Lopes, 102 - Centro Cívico, Curitiba - PR, 80530-000, Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>

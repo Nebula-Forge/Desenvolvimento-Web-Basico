@@ -5,58 +5,68 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #542E71 ,#E90064 );
+    background: #fff;
     font-family: 'Poppins', sans-serif;
 }
 
-.header
-{
-    min-height: 60vh;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
+/* ---------------------------- ÍNICIO DA PÁGINA INICIAL ------------------------------------- */
+
+/* -------------------------- CABEÇALHO -------------------------- */
 
 nav
 {
     display: flex;
-    padding: 2% 6%;
+    padding: 0% 5%;
     justify-content: space-between;
     align-items: center;
 }
 
 nav img
 {
-    width: 140px;
+    width: 100px;
 }
 
-.nav-links
-{
-    flex: 1;
-    text-align: right;
-    z-index: 1;
+/* -------------------------- BARRA DE NAVEGAÇÃO -------------------------- */
+
+.barra_de_navegação {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-links ul li
-{
+.barra_de_navegação ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
+    line-height: 30px; /* Ajuste a altura conforme necessário */
 }
 
-.nav-links ul li a
-{
-    color: #F8DE22;
+.barra_de_navegação ul li a {
+    color: #000000;
     text-decoration: none;
     font-size: 13px;
+    display: inline-block; /* Isso ajuda a alinhar verticalmente com o texto, se necessário */
+    vertical-align: middle; /* Alinhar verticalmente ao meio */
 }
 
-.nav-links ul li::after
-{
+.barra_de_navegação ul li a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.barra_de_navegação ul li a button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.barra_de_navegação ul li::after {
     content: '';
-    width: 0%;
+    width: 0;
     height: 2px;
     background: #F94C10;
     display: block;
@@ -64,148 +74,166 @@ nav img
     transition: 0.5s;
 }
 
-.nav-links ul li:hover::after
-{
+.barra_de_navegação ul li:hover::after {
     background: #F94C10;
     width: 100%;
 }
 
-.text-box
-{
-    width: 100%;
-    color:#FB3640;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
+ /* ------------------------------ BARRA DE PESQUISA ---------------------------------- */
 
-.text-box h1
-{
-    font-size: 62px;
-}
-
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #F8DE22;
-    border: 1px solid #F8DE22;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.hero-btn:hover {
-    /* On hover, change border color, background color */
-    border: 1px solid #F8DE22;
-    background: #fff;
-    
-    /* Smoothly transition changes */
-    transition: 1s;
-}
-
-/*------ PRODUTOS ------*/
-.produtos /* center alignment */
-{
-    width: 95%; /* set width */
-    text-align: left; /* align text center */
-    padding: 30px; /* set padding around elements */
-}
-
-h1 {
-    color: #FB3640;
-    font-size: 30px;
-}
-
-.lista-de-produtos{
-    max-height: 500px; /* Defina a altura desejada para a lista de produtos */
-    overflow-x: auto; /* Isso permitirá a rolagem vertical conforme necessário */
-    white-space: nowrap; /* Impede que os itens da lista sejam quebrados em linhas separadas */
-    scrollbar-width: thin;
-    scrollbar-color: #244235 #ffffff;
-}
-
-.lista-de-produtos::-webkit-scrollbar {
-    height: 6px !important; /* Altura mais fina da barra de rolagem */
-}
-
-.lista-de-produtos::-webkit-scrollbar-track {
-    background: #f2f2f2; /* Cor do fundo da pista da barra de rolagem */
-    border-radius: 10px; /* Raio da borda da pista da barra de rolagem */
-}
-
-.lista-de-produtos::-webkit-scrollbar-thumb {
-    background-color: #d9d9d9; /* Cor da barra de rolagem */
-    border-radius: 10px; /* Raio da borda da barra de rolagem */
-}
-
-/* Estilização da barra de rolagem para outros navegadores */
-.lista-de-produtos::-webkit-scrollbar {
-    height: 6px !important; /* Altura mais fina da barra de rolagem */
-}
-
-.lista-de-produtos::-webkit-scrollbar-track {
-    background: #f2f2f2; /* Cor do fundo da pista da barra de rolagem */
-    border-radius: 10px; /* Raio da borda da pista da barra de rolagem */
-}
-
-.lista-de-produtos::-webkit-scrollbar-thumb {
-    background-color: #d9d9d9; /* Cor da barra de rolagem */
-    border-radius: 10px; /* Raio da borda da barra de rolagem */
-}
-
-.row
-{
-    margin-top: 5%;
+.barra_de_pesquisa {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
-/*PRODUTOS-ITEMS*/
-.produtos-item {
-    border: 2px solid #542E71;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    width: 210px;
-    text-align: center;
-    background-color: #A799B7;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+.barra_de_pesquisa input {
+    padding: 8px 280px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
 }
 
-.produtos-item img {
-    width: 180px;
-    height: 180px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/*Nome do produto*/
-.produtos-item h3 {
-    color: #0066ff;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.produtos-item p {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.adicionar-ao-carrinho-botao {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+.barra_de_pesquisa button {
+    padding: 6px 6px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
 }
 
-/*------ FILIAIS ------*/
+.barra_de_pesquisa img {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+
+/* -------------------------- CARROSSEL DE IMAGENS -------------------------- */
+
+.destaques {
+    position: relative;
+}
+
+.carrossel-container {
+    overflow: hidden;
+    width: 100%; /* Ocupa 100% da largura da página */
+    background-color: rgba(169, 169, 169, 0.5); /* Cor cinza com 50% de opacidade */
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 80%;
+    height: auto;
+    object-fit: fill;
+    max-height: 500px; /* Ajuste o valor conforme necessário para o tamanho desejado */
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background-color: #555;
+}
+
+/* -------------------------- CATEGORIAS -------------------------- */
+
+.categorias_div {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.categorias_div h1 {
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
+}
+
+
+.categorias {
+    display: flex;
+    justify-content: center;
+}
+
+.categorias-container {
+    display: flex;
+    justify-content: space-around; /* Distribui as categorias igualmente com espaçamento entre elas */
+    flex-wrap: wrap; /* Permite que as categorias quebrem para a próxima linha se não houver espaço suficiente */
+}
+
+.categoria {
+    flex: 0 0 calc(25% - 25px); /* Defina a largura da categoria (25% com espaçamento de 10px em cada lado) */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin: 10px; /* Adiciona espaçamento em todos os lados da categoria */
+    width: 500px; /* Defina o tamanho desejado */
+    height: 150px; /* Defina o tamanho desejado */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+}
+
+.categoria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o contêiner */
+    transition: transform 0.3s;
+}
+
+.categoria .conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+    color: #fff; /* Cor do texto branco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1; /* Certifique-se de que o z-index seja maior do que o da imagem */
+}
+
+.categoria:hover .conteudo {
+    opacity: 1;
+}
+
+.categoria:hover img {
+    transform: scale(1.2);
+}
+
+.categoria:hover .conteudo span {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro mais escuro ao passar o mouse */
+}
+
+/* ---------------------------------------- FILIAIS -----------------------------------------*/
+
 .filiais {
     width: 80%;
     margin: auto;
@@ -214,10 +242,9 @@ h1 {
 }
 
 .filiais h1 {
-    font-size: 36px;
-    font-weight: 600;
-    color: #FF5200;
-    margin-bottom: 30px;
+    font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
 
 .filiais-container {
@@ -248,13 +275,201 @@ h1 {
 }
 
 .filiais-info h3 {
-    color: #FFF600;
     font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
 
 .filiais-info p {
-    color: #FFF600;
     font-size: 16px;
+    color: #333; /* Cor do texto */
+    margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
+
+/* ---------------------------- FIM DA PÁGINA INICIAL ------------------------------------- */
+
+/* ---------------------------- INICIO PAGINAS CATEGORIAS  ------------------------------------- */
+
+body {
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin:  15px;
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 0;
+}
+
+.product img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ---------------------------- FIM DAS PÁGINAS CATEGORIAS ------------------------------------- */
+
+/* ---------------------------- INICIO DAS PÁGINAS LOGIN/CADASTRO ------------------------------------- */
+
+.login_cadastro_form #cadastro-login-container {
+    width: 500px;
+    margin: 50px auto; /* Centralizar na tela com um espaçamento superior de 50px */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.login_cadastro_form .login,
+.login_cadastro_form .signup {
+    margin-top: 20px;
+}
+
+.login_cadastro_form input[type="text"],
+.login_cadastro_form input[type="password"],
+.login_cadastro_form input[type="tel"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Borda cinza claro */
+    border-radius: 5px;
+}
+
+.login_cadastro_form input[type="submit"] {
+    background-color: #800080; /* Roxo */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_cadastro_form input[type="submit"]:hover {
+    background-color: #5a005a; /* Roxo escuro no hover */
+}
+
+/* Adicionando estilo aos links de navegação */
+.login_cadastro_form a {
+    color: #800080; /* Roxo */
+    text-decoration: none;
+}
+
+.login_cadastro_form a:hover {
+    color: #5a005a; /* Roxo escuro no hover */
+}
+
+.login_cadastro_form p{
+    padding: 2%;
+}
+
+/* ---------------------------- FIM DAS PÁGINAS LOGIN/CADASTRO ------------------------------------- */
+
+/* ---------------------------- INICIO DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */
+
+.carrinho_de_compras body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.carrinho_de_compras header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.carrinho_de_compras .cart {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 10px #555;
+    overflow: hidden;
+}
+
+.carrinho_de_compras .cart-header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px; 
+}
+
+.carrinho_de_compras .cart-items {
+    padding: 20px;
+}
+
+.carrinho_de_compras .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0; 
+}
+
+.carrinho_de_compras .item img {
+    max-width: 50px;
+    margin-right: 10px; 
+}
+
+.carrinho_de_compras .item-name {
+    flex-grow: 1;
+}
+
+.carrinho_de_compras .item-price {
+    font-weight: bold;
+}
+
+.carrinho_de_compras .cart-total {
+    text-align: right;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.carrinho_de_compras .checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.carrinho_de_compras .checkout-btn:hover {
+    background-color: #555;
+}
+
+/* ---------------------------- FIM DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */
