@@ -1,165 +1,187 @@
-*{
+/* Resetando margens e preenchimentos padrão para todos os elementos */
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Definindo o estilo padrão para o corpo da página */
 body {
-    background: #fff;
-    font-family: 'Poppins', sans-serif;
+    background: #fff; /* Cor de fundo branca */
+    font-family: 'Poppins', sans-serif; /* Usando a fonte Poppins como padrão para o texto */
 }
-
 /* ---------------------------- ÍNICIO DA PÁGINA INICIAL ------------------------------------- */
 
 /* -------------------------- CABEÇALHO -------------------------- */
 
-nav
-{
-    display: flex;
-    padding: 0% 5%;
-    justify-content: space-between;
-    align-items: center;
+/* Estilo para a navegação (nav) */
+nav {
+    display: flex; /* Exibe os itens como um contêiner flexível */
+    padding: 0% 5%; /* Preenchimento de 0% no topo/bottom e 5% nas laterais */
+    justify-content: space-between; /* Distribui o espaço disponível entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
-nav img
-{
-    width: 100px;
+/* Estilo para as imagens dentro da navegação */
+nav img {
+    width: 100px; /* Define a largura máxima das imagens como 100 pixels */
 }
+
 
 /* -------------------------- BARRA DE NAVEGAÇÃO -------------------------- */
 
+/* Estilo para a barra de navegação */
 .barra_de_navegação {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Exibe os itens como um contêiner flexível */
+    justify-content: space-between; /* Distribui o espaço disponível entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
+/* Estilo para os itens da lista dentro da barra de navegação */
 .barra_de_navegação ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-    line-height: 30px; /* Ajuste a altura conforme necessário */
+    list-style: none; /* Remove os marcadores de lista padrão */
+    display: inline-block; /* Exibe os itens lado a lado */
+    padding: 8px 12px; /* Espaçamento interno de 8px no topo/bottom e 12px nas laterais */
+    position: relative; /* Define uma posição relativa para possibilitar posicionamento absoluto interno */
+    line-height: 30px; /* Ajusta a altura do item conforme necessário */
 }
 
+/* Estilo para os links dentro dos itens da lista na barra de navegação */
 .barra_de_navegação ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 13px;
-    display: inline-block; /* Isso ajuda a alinhar verticalmente com o texto, se necessário */
-    vertical-align: middle; /* Alinhar verticalmente ao meio */
+    color: #000000; /* Cor do texto */
+    text-decoration: none; /* Remove a decoração de texto sublinhado nos links */
+    font-size: 13px; /* Tamanho da fonte */
+    display: inline-block; /* Permite alinhar verticalmente com o texto, se necessário */
+    vertical-align: middle; /* Alinha verticalmente ao meio */
 }
 
+/* Estilo para as imagens dentro dos links dos itens da lista na barra de navegação */
 .barra_de_navegação ul li a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-    background-color: transparent;
+    width: 30px; /* Largura da imagem */
+    height: 30px; /* Altura da imagem */
+    margin-right: 5px; /* Margem à direita para separação da imagem e do texto */
+    background-color: transparent; /* Fundo transparente para imagens */
 }
 
+/* Estilo para os botões dentro dos links dos itens da lista na barra de navegação */
 .barra_de_navegação ul li a button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    padding: 0; /* Remove o espaçamento interno */
+    cursor: pointer; /* Mostra o cursor como ponteiro ao passar sobre o botão */
 }
 
+/* Estilo para o efeito de sublinhado nos itens da lista na barra de navegação */
 .barra_de_navegação ul li::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    background: #F94C10;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+    content: ''; /* Adiciona um elemento de conteúdo pseudo ::after */
+    width: 0; /* Inicialmente, a largura é zero (não visível) */
+    height: 2px; /* Altura da linha de sublinhado */
+    background: #F94C10; /* Cor da linha de sublinhado */
+    display: block; /* Exibe como bloco para ocupar a largura total do contêiner pai */
+    margin: auto; /* Centraliza horizontalmente usando margens automáticas */
+    transition: 0.5s; /* Adiciona uma transição suave de 0.5 segundos */
 }
 
+/* Efeito de sublinhado ao passar o mouse sobre os itens da lista na barra de navegação */
 .barra_de_navegação ul li:hover::after {
-    background: #F94C10;
-    width: 100%;
+    background: #F94C10; /* Altera a cor da linha de sublinhado ao passar o mouse */
+    width: 100%; /* Aumenta a largura para 100% ao passar o mouse */
 }
 
  /* ------------------------------ BARRA DE PESQUISA ---------------------------------- */
 
+/* Estilo para a barra de pesquisa na barra de navegação */
 .barra_de_pesquisa {
-    display: flex;
-    align-items: center;
+    display: flex; /* Exibe os elementos em linha (um ao lado do outro) */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
+/* Estilo para a caixa de entrada de texto na barra de pesquisa */
 .barra_de_pesquisa input {
-    padding: 8px 280px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 5px;
+    padding: 8px 280px; /* Espaçamento interno - ajuste conforme necessário */
+    border: 1px solid #ccc; /* Borda da caixa de entrada de texto */
+    border-radius: 5px; /* Bordas arredondadas para uma aparência mais suave */
+    margin-right: 5px; /* Margem à direita para separação do botão */
 }
 
+/* Estilo para o botão de pesquisa na barra de pesquisa */
 .barra_de_pesquisa button {
-    padding: 6px 6px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 6px 6px; /* Espaçamento interno - ajuste conforme necessário */
+    border: 1px solid #ccc; /* Borda do botão de pesquisa */
+    border-radius: 5px; /* Bordas arredondadas para uma aparência mais suave */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
 }
 
+/* Estilo para a imagem dentro do botão de pesquisa */
 .barra_de_pesquisa img {
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
+    width: 20px; /* Largura da imagem - ajuste conforme necessário */
+    height: 20px; /* Altura da imagem - ajuste conforme necessário */
+    background-color: transparent; /* Fundo transparente para a imagem */
 }
 
 /* -------------------------- CARROSSEL DE IMAGENS -------------------------- */
 
+/* Estilo para a seção de destaques */
 .destaques {
-    position: relative;
+    position: relative; /* Posição relativa para elementos filhos posicionados absolutamente */
 }
 
+/* Estilo para o contêiner do carrossel */
 .carrossel-container {
-    overflow: hidden;
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse o contêiner */
     width: 100%; /* Ocupa 100% da largura da página */
     background-color: rgba(169, 169, 169, 0.5); /* Cor cinza com 50% de opacidade */
 }
 
+/* Estilo para o carrossel */
 .carrossel {
-    display: flex;
-    transition: transform 1.5s ease;
+    display: flex; /* Exibe os slides em uma linha horizontal */
+    transition: transform 1.5s ease; /* Adiciona uma transição suave ao transformar */
 }
 
+/* Estilo para cada slide no carrossel */
 .slide {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 100%; /* Largura mínima de cada slide é 100% do contêiner */
+    display: flex; /* Exibe conteúdo do slide em linha */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do slide */
+    align-items: center; /* Centraliza verticalmente o conteúdo do slide */
 }
 
+/* Estilo para a imagem dentro de cada slide */
 .slide img {
-    width: 80%;
-    height: auto;
-    object-fit: fill;
-    max-height: 500px; /* Ajuste o valor conforme necessário para o tamanho desejado */
+    width: 80%; /* Largura da imagem é 80% do slide */
+    height: auto; /* Altura automática para manter a proporção */
+    object-fit: fill; /* Preenche completamente o espaço do contêiner do slide */
+    max-height: 500px; /* Altura máxima da imagem - ajuste conforme necessário */
 }
 
+/* Estilo para os indicadores de navegação do carrossel */
 .indicadores {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner pai */
+    bottom: 10px; /* Distância de 10 pixels a partir da parte inferior */
+    left: 50%; /* Alinhamento central horizontal */
+    transform: translateX(-50%); /* Correção para centralizar corretamente */
+    display: flex; /* Exibe os indicadores em linha */
 }
 
+/* Estilo para cada indicador */
 .indicador {
-    width: 10px;
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+    width: 10px; /* Largura do indicador */
+    height: 10px; /* Altura do indicador */
+    background-color: #ddd; /* Cor de fundo padrão */
+    border-radius: 50%; /* Borda arredondada para um visual circular */
+    margin: 0 5px; /* Margem entre os indicadores */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
 }
 
+/* Estilo para o indicador ativo (indicando o slide atual) */
 .indicador.ativo {
-    background-color: #555;
+    background-color: #555; /* Cor de fundo para indicar o slide atual */
 }
 
 /* -------------------------- CATEGORIAS -------------------------- */
 
+/* Estilo para a seção de categorias */
 .categorias_div {
     text-align: center;
     margin-top: 10px;
@@ -172,18 +194,20 @@ nav img
     margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
 
-
+/* Estilo para o contêiner geral das categorias */
 .categorias {
     display: flex;
     justify-content: center;
 }
 
+/* Estilo para o contêiner das categorias individuais */
 .categorias-container {
     display: flex;
     justify-content: space-around; /* Distribui as categorias igualmente com espaçamento entre elas */
     flex-wrap: wrap; /* Permite que as categorias quebrem para a próxima linha se não houver espaço suficiente */
 }
 
+/* Estilo para cada categoria individual */
 .categoria {
     flex: 0 0 calc(25% - 25px); /* Defina a largura da categoria (25% com espaçamento de 10px em cada lado) */
     position: relative;
@@ -196,13 +220,15 @@ nav img
     border-radius: 10px; /* Adicione bordas arredondadas */
 }
 
+/* Estilo para a imagem dentro de cada categoria */
 .categoria img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Garante que a imagem cubra todo o contêiner */
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Adiciona uma transição suave ao efeito de escala */
 }
 
+/* Estilo para o conteúdo sobreposto na categoria ao passar o mouse */
 .categoria .conteudo {
     position: absolute;
     top: 0;
@@ -220,20 +246,24 @@ nav img
     z-index: 1; /* Certifique-se de que o z-index seja maior do que o da imagem */
 }
 
+/* Estilo para a categoria ao passar o mouse */
 .categoria:hover .conteudo {
     opacity: 1;
 }
 
+/* Efeito de escala na imagem ao passar o mouse */
 .categoria:hover img {
     transform: scale(1.2);
 }
 
+/* Estilo para a sobreposição escura mais escura ao passar o mouse */
 .categoria:hover .conteudo span {
     background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro mais escuro ao passar o mouse */
 }
 
 /* ---------------------------------------- FILIAIS -----------------------------------------*/
 
+/* Estilo para a seção de filiais */
 .filiais {
     width: 80%;
     margin: auto;
@@ -241,12 +271,14 @@ nav img
     padding-top: 50px;
 }
 
+/* Estilo para o título da seção de filiais */
 .filiais h1 {
     font-size: 30px; /* Ajuste o tamanho da fonte conforme necessário */
     color: #333; /* Cor do texto */
     margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
 
+/* Estilo para o contêiner geral das filiais */
 .filiais-container {
     display: flex;
     justify-content: space-around;
@@ -254,6 +286,7 @@ nav img
     margin-top: 30px;
 }
 
+/* Estilo para cada item de filial */
 .filiais-item {
     position: relative;
     overflow: hidden;
@@ -262,6 +295,7 @@ nav img
     text-align: center;
 }
 
+/* Estilo para a imagem de cada filial */
 .filiais-item img {
     width: 100%;
     height: 400px;
@@ -270,16 +304,19 @@ nav img
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Estilo para a informação de cada filial */
 .filiais-info {
     margin-top: 20px;
 }
 
+/* Estilo para o título da informação de cada filial */
 .filiais-info h3 {
     font-size: 24px;
     color: #333; /* Cor do texto */
     margin-bottom: 10px; /* Ajuste o espaçamento inferior conforme necessário */
 }
 
+/* Estilo para o texto da informação de cada filial */
 .filiais-info p {
     font-size: 16px;
     color: #333; /* Cor do texto */
@@ -290,6 +327,7 @@ nav img
 
 /* ---------------------------- INICIO PAGINAS CATEGORIAS  ------------------------------------- */
 
+/* Estilo para o feedback na parte superior da página */
 .feedback {
     background-color: #4CAF50; /* Cor de fundo verde */
     color: white;
@@ -302,250 +340,248 @@ nav img
     transition: opacity 0.5s;
 }
 
-.feedback.show {
-    opacity: 1;
-}.feedback {
-    background-color: #4CAF50; /* Cor de fundo verde */
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-
+/* Estilo para mostrar o feedback */
 .feedback.show {
     opacity: 1;
 }
 
-body {
-    background: #fff;
-    font-family: 'Poppins', sans-serif;
-}
+/* Estilos para o layout geral da página */
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin:  15px;
-    font-weight: bold;
-}
-
+/* Configuração do contêiner principal com largura de 80% e centralização automática */
 .container {
     width: 80%;
     margin: 0 auto;
 }
 
+/* Estilos para cada produto na página */
 .product {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 40px 0;
+    border: 1px solid #ccc; /* Borda com cor cinza claro */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    margin: 40px 0; /* Espaçamento externo (superior e inferior) */
 }
 
+/* Estilos para as imagens dos produtos */
 .product img {
-    max-width: 25%;
-    height: auto;
-    border-radius: 5px;
+    max-width: 25%; /* Largura máxima da imagem como 25% do contêiner pai */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 5px; /* Cantos arredondados na imagem */
 }
 
+/* Estilos para o rodapé da página */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 1px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    background-color: #333; /* Cor de fundo escura */
+    color: white; /* Cor do texto branco */
+    padding: 1px; /* Espaçamento interno mínimo */
+    text-align: center; /* Centralização do texto */
+    position: fixed; /* Posição fixa na parte inferior da página */
+    bottom: 0; /* Alinhamento na parte inferior */
+    width: 100%; /* Largura total da página */
 }
 
+/* Estilos para o feedback visual de item adicionado ao carrinho */
 .added-to-cart {
-    color: green;
-    margin-left: 10px;
+    color: green; /* Cor verde para indicar sucesso */
+    margin-left: 10px; /* Espaçamento à esquerda */
 }
 
+/* Estilos para cada item no carrinho de compras */
 .item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    max-width: 300px;
+    display: flex; /* Exibe os elementos em linha */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    border: 1px solid #ccc; /* Borda com cor cinza claro */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px; /* Espaçamento externo */
+    max-width: 300px; /* Largura máxima do item */
 }
 
+/* Estilos para as imagens dos itens no carrinho */
 .item img {
-    max-width: 100px;
-    max-height: 100px;
-    margin-right: 10px;
+    max-width: 100px; /* Largura máxima da imagem */
+    max-height: 100px; /* Altura máxima da imagem */
+    margin-right: 10px; /* Espaçamento à direita da imagem */
 }
 
+/* Estilos para os detalhes do item no carrinho */
 .item-details {
-    flex: 1;
+    flex: 1; /* Ocupa o espaço disponível restante */
 }
 
+/* Estilos para o nome do item no carrinho */
 .item-name {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.2em; /* Tamanho da fonte maior */
+    font-weight: bold; /* Texto em negrito */
 }
 
+/* Estilos para o preço do item no carrinho */
 .item-price {
-    color: #800080;
+    color: #800080; /* Cor púrpura para destacar o preço */
 }
 
+/* Estilos para o botão de compra */
 .buy-button {
-    background-color: #800080;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #800080; /* Cor de fundo roxa */
+    color: #fff; /* Cor do texto branco */
+    padding: 10px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse como ponteiro */
 }
 
+/* Estilos quando o cursor está sobre o botão de compra */
 .buy-button:hover {
-    background-color: #5a005a;
+    background-color: #5a005a; /* Cor de fundo roxa mais escura ao passar o mouse */
 }
 
 /* ---------------------------- FIM DAS PÁGINAS CATEGORIAS ------------------------------------- */
 
 /* ---------------------------- INICIO DAS PÁGINAS LOGIN/CADASTRO ------------------------------------- */
 
+/* Estilos para o contêiner de login/cadastro */
 .login_cadastro_form #cadastro-login-container {
-    width: 500px;
-    margin: 50px auto; /* Centralizar na tela com um espaçamento superior de 50px */
-    padding: 20px;
+    width: 500px; /* Largura do contêiner */
+    margin: 50px auto; /* Centraliza na tela com um espaçamento superior de 50px */
+    padding: 20px; /* Espaçamento interno */
     background: rgba(255, 255, 255, 0.8); /* Fundo branco com leve transparência */
-    border-radius: 10px;
+    border-radius: 10px; /* Borda arredondada */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilos para as seções de login e cadastro */
 .login_cadastro_form .login,
 .login_cadastro_form .signup {
-    margin-top: 20px;
+    margin-top: 20px; /* Espaçamento superior entre as seções */
 }
 
+/* Estilos para os campos de entrada de texto e senha */
 .login_cadastro_form input[type="text"],
 .login_cadastro_form input[type="password"],
 .login_cadastro_form input[type="tel"] {
-    width: 95%;
-    padding: 10px;
-    margin: 10px 0;
+    width: 95%; /* Largura do campo de entrada */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Espaçamento superior e inferior */
     border: 1px solid #ccc; /* Borda cinza claro */
-    border-radius: 5px;
+    border-radius: 5px; /* Borda arredondada */
 }
 
+/* Estilos para o botão de envio */
 .login_cadastro_form input[type="submit"] {
-    background-color: #800080; /* Roxo */
+    background-color: #800080; /* Cor de fundo roxa */
     color: #fff; /* Texto branco */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Cursor do mouse como ponteiro */
 }
 
+/* Estilos para o botão de envio quando o cursor está sobre ele */
 .login_cadastro_form input[type="submit"]:hover {
-    background-color: #5a005a; /* Roxo escuro no hover */
+    background-color: #5a005a; /* Cor de fundo roxa mais escura no hover */
 }
 
-/* Adicionando estilo aos links de navegação */
+/* Estilos para os links de navegação */
 .login_cadastro_form a {
-    color: #800080; /* Roxo */
-    text-decoration: none;
+    color: #800080; /* Cor do texto roxa */
+    text-decoration: none; /* Sem decoração de texto (sublinhado) */
 }
 
+/* Estilos para os links de navegação quando o cursor está sobre eles */
 .login_cadastro_form a:hover {
-    color: #5a005a; /* Roxo escuro no hover */
+    color: #5a005a; /* Cor do texto roxa mais escura no hover */
 }
 
-.login_cadastro_form p{
-    padding: 2%;
+/* Estilos para os parágrafos dentro do formulário */
+.login_cadastro_form p {
+    padding: 2%; /* Espaçamento interno dos parágrafos */
 }
 
 /* ---------------------------- FIM DAS PÁGINAS LOGIN/CADASTRO ------------------------------------- */
 
 /* ---------------------------- INICIO DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */
 
+/* Estilos para o carrinho de compras */
 .cart {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Largura máxima do carrinho */
+    margin: 20px auto; /* Centraliza o carrinho na tela com espaçamento superior e inferior de 20px */
+    padding: 20px; /* Espaçamento interno do carrinho */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Estilos para o cabeçalho do carrinho */
 .cart-header h2 {
-    color: #800080;
+    color: #800080; /* Cor do texto roxa */
 }
 
+/* Estilos para os itens do carrinho */
 .cart-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: flex; /* Exibe os itens em linha */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se não houver espaço suficiente */
+    gap: 10px; /* Espaçamento entre os itens */
 }
 
+/* Estilos para cada item do carrinho */
 .item {
-    display: flex;
-    align-items: center;
+    display: flex; /* Exibe os itens em linha */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
     border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior entre os itens */
-    padding: 10px 180px;
+    padding: 10px 180px; /* Espaçamento interno do item (ajuste conforme necessário) */
 }
 
+/* Estilos para a imagem do item no carrinho */
 .item img {
-    width: 80px; /* Ajuste conforme necessário */
-    height: 80px; /* Ajuste conforme necessário */
-    margin-right: 10px;
+    width: 80px; /* Largura da imagem do item (ajuste conforme necessário) */
+    height: 80px; /* Altura da imagem do item (ajuste conforme necessário) */
+    margin-right: 10px; /* Espaçamento à direita da imagem */
 }
 
+/* Estilos para o nome e o preço do item no carrinho */
 .item-name,
 .item-price {
-    flex: 1;
+    flex: 1; /* Distribui o espaço igualmente entre o nome e o preço */
 }
 
+/* Estilos para o total do carrinho */
 .cart-total {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #800080;
+    margin-top: 20px; /* Espaçamento superior do total do carrinho */
+    font-size: 1.2em; /* Tamanho da fonte do total do carrinho */
+    color: #800080; /* Cor do texto roxa */
 }
 
+/* Estilos para o botão de checkout */
 .checkout-btn {
-    display: block;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #800080;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
+    display: block; /* Exibe como bloco para ocupar a largura total disponível */
+    margin-top: 20px; /* Espaçamento superior do botão de checkout */
+    padding: 10px; /* Espaçamento interno do botão de checkout */
+    background-color: #800080; /* Cor de fundo roxa */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none; /* Sem decoração de texto (sublinhado) */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 5px; /* Borda arredondada */
 }
 
+/* Estilos para o botão de checkout quando o cursor está sobre ele */
 .checkout-btn:hover {
-    background-color: #5a005a;
+    background-color: #5a005a; /* Cor de fundo roxa mais escura no hover */
 }
 
+/* Estilos para o botão de limpar o carrinho */
 .clear-cart-btn {
-display: block;
-margin-top: 20px;
-padding: 10px;
-background-color: #800080;
-color: #fff;
-text-decoration: none;
-text-align: center;
-border-radius: 5px;
+    display: block; /* Exibe como bloco para ocupar a largura total disponível */
+    margin-top: 20px; /* Espaçamento superior do botão de limpar o carrinho */
+    padding: 10px; /* Espaçamento interno do botão de limpar o carrinho */
+    background-color: #dd0d0d; /* Cor de fundo roxa */
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none; /* Sem decoração de texto (sublinhado) */
+    text-align: center; /* Alinha o texto ao centro */
+    border-radius: 5px; /* Borda arredondada */
 }
 
+/* Estilos para o botão de limpar o carrinho quando o cursor está sobre ele */
 .clear-cart-btn:hover {
-    background-color: #5a005a;
+    background-color: #a10808; /* Cor de fundo roxa mais escura no hover */
 }
-
-
 
 /* ---------------------------- FIM DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */

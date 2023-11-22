@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <!-- Configurações básicas do documento -->
+    <head>
+        <!-- Definição da codificação de caracteres para UTF-8 -->
+        <meta charset="UTF-8">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro|Login</title>
+        <!-- Configuração da viewport para suporte a dispositivos móveis -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+        <!-- Título da página -->
+        <title>Cadastro|Login</title>
 
+        <!-- Importação do arquivo CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+   <!-- Corpo da página com a classe 'pagina-login' -->
 <body class="pagina-login">
-    <!-- Seção do header -->
+    
+    <!-- Seção do cabeçalho -->
     <section class="cabeçalho">
         <!-- Navegação do site -->
         <nav>
+            <!-- Link da logo redirecionando para a página inicial -->
             <a href="index.html"><img src="../assets/icons/logo.jpg"></a>
+
+            <!-- Barra de navegação -->
             <div class="barra_de_navegação">
                 <!-- Lista de links de navegação -->
                 <ul>
+                    <!-- Link para as categorias na página inicial -->
                     <li>
                         <a href="index.html#categorias">CATEGORIAS</a>
                     </li>
+                    <!-- Link para o formulário de login -->
                     <li>
                         <a href="cadastro.login.html#login">
                             <button type="button">
@@ -28,6 +40,7 @@
                             </button>
                         </a>
                     </li>
+                    <!-- Link para o carrinho de compras -->
                     <li>
                         <a href="carrinho_de_compras.html">
                             <button type="button">
@@ -38,24 +51,32 @@
                 </ul>
             </div>
         </nav>
-    </section> 
+    </section>
 
+    <!-- Seção do formulário de login e cadastro -->
     <section class="login_cadastro_form">
+        <!-- Container para os formulários de login e cadastro -->
         <div id="cadastro-login-container">
+            
+            <!-- Formulário de login -->
             <div class="login" id="login-section">
                 <h2>Login</h2>
+                <!-- Formulário de login -->
                 <form id="loginForm" onsubmit="return redirectToIndex()">
                     <input type="text" name="Usuário" placeholder="Usuário" required>
                     <input type="password" name="Senha" placeholder="Senha" required>
                     <input type="submit" value="Entrar">
                 </form>
                 <p>
+                    <!-- Link para alternar para o formulário de cadastro -->
                     <a href="javascript:void(0);" onclick="showSignup()">Ainda não possui uma conta? Cadastre-se!</a>
                 </p>
             </div>
-    
+
+            <!-- Formulário de cadastro -->
             <div class="signup" id="signup-section">
                 <h2>Cadastro de Novos Usuários</h2>
+                <!-- Formulário de cadastro -->
                 <form id="cadastroForm">
                     <input type="text" name="NomeCompleto" placeholder="Nome Completo" required>
                     <input type="text" name="CPF" placeholder="CPF" required>
@@ -65,19 +86,23 @@
                     <input type="submit" value="Cadastrar">
                 </form>
                 <p>
+                    <!-- Link para alternar para o formulário de login -->
                     <a href="javascript:void(0);" onclick="showLogin()">Já possui uma conta? Faça login!</a>
                 </p>
             </div>
+
         </div>
     </section>
 
+    <!-- Inclusão do arquivo de script JavaScript -->
     <script src="../javascript/script.js"></script>
+
+    <!-- Trecho de script para mostrar apenas o formulário de login ao carregar a página -->
     <script>
-        // Esse trecho faz mostrar apenas o login ao carregar a página
         document.addEventListener('DOMContentLoaded', function () {
             showLogin();
         });
     </script>
-</body>
 
+</body>
 </html>

@@ -1,17 +1,23 @@
 |<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <!-- Definições básicas -->
+        <!-- Configuração da codificação de caracteres para UTF-8 -->
         <meta charset="UTF-8">
+        <!-- Configuração da viewport para suporte a dispositivos móveis -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Título da página -->
         <title>Ollie POP Shop</title>
-
-        <!-- Immportação do arquivo CSS -->
+    
+        <!-- Importação do arquivo CSS -->
+        <!-- Link para o arquivo style.css localizado um nível acima do diretório atual -->
         <link rel="stylesheet" href="../css/style.css">
-
+    
         <!-- Importação da fonte Poppins do Google Fonts -->
+        <!-- Pré-conexão ao Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- Link para o arquivo de estilo da fonte Poppins com diferentes pesos -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -19,129 +25,210 @@
         <section class="cabeçalho">
             <!-- Navegação do site -->
             <nav>
+                <!-- Logo do site -->
                 <img src="../assets/icons/logo.jpg">
+
+                <!-- Barra de pesquisa -->
                 <div class="barra_de_pesquisa">
+                    <!-- Campo de entrada para pesquisa -->
                     <input type="text" placeholder="Pesquisar...">
+
+                    <!-- Botão de pesquisa -->
                     <button type="button">
-                        <img src="../assets/icons/lupa.png" alt="PERFIL">
+                        <!-- Ícone de lupa para indicar pesquisa -->
+                        <img src="../assets/icons/lupa.png" alt="ÍCONE DE PESQUISA">
                     </button>
                 </div>
+
+                <!-- Barra de navegação -->
                 <div class="barra_de_navegação">
                     <!-- Lista de links de navegação -->
                     <ul>
+                        <!-- Link para a página de login/cadastro -->
                         <li>
                             <a href="cadastro.login.html#login">
+                                <!-- Botão com ícone de usuário para perfil -->
                                 <button type="button">
-                                    <img src="../assets/icons/user.jpg" alt="PERFIL">
+                                    <img src="../assets/icons/user.jpg" alt="ÍCONE DE PERFIL">
                                 </button>
                             </a>
                         </li>
+
+                        <!-- Link para a página do carrinho de compras -->
                         <li>
                             <a href="carrinho_de_compras.html">
+                                <!-- Botão com ícone de carrinho de compras -->
                                 <button type="button">
-                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="CARRINHO">
+                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="ÍCONE DE CARRINHO DE COMPRAS">
                                 </button>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </section> 
+        </section>
         
         <!-- Seção dos destaques -->
         <section class="destaques">
+            <!-- Container do carrossel -->
             <div class="carrossel-container">
+                <!-- Carrossel de destaques -->
                 <div class="carrossel">
+                    <!-- Slide 1 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 1 -->
                         <img src="../assets/destaques/destaque_exemplo_1.webp" alt="destaque_1">
                     </div>
+
+                    <!-- Slide 2 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 2 -->
                         <img src="../assets/destaques/destaque_exemplo_2.webp" alt="destaque_2">
                     </div>
+
+                    <!-- Slide 3 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 3 -->
                         <img src="../assets/destaques/destaque_exemplo_3.webp" alt="destaque_3">
                     </div>
+
+                    <!-- Slide 4 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 4 -->
                         <img src="../assets/destaques/destaque_exemplo_4.webp" alt="destaque_4">
                     </div>
+
+                    <!-- Slide 5 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 5 -->
                         <img src="../assets/destaques/destaque_exemplo_5.webp" alt="destaque_5">
                     </div>
+
+                    <!-- Slide 6 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 6 -->
                         <img src="../assets/destaques/destaque_exemplo_6.webp" alt="destaque_6">
                     </div>
+
+                    <!-- Slide 7 -->
                     <div class="slide">
+                        <!-- Imagem do destaque 7 -->
                         <img src="../assets/destaques/destaque_exemplo_7.webp" alt="destaque_7">
                     </div>
                 </div>
+
+                <!-- Indicadores do carrossel -->
                 <div class="indicadores"></div>
             </div>
         </section>
-        
+
+        <!-- Divisão de categorias -->
         <div class="categorias_div">
+            <!-- Título da seção de categorias -->
             <h1>CATEGORIAS</h1>
         </div>
 
+        <!-- Seção de Categorias -->
         <section id="categorias" class="categorias">
+            <!-- Container para as categorias -->
             <div class="categorias-container">
+                <!-- Categoria: Roupas -->
                 <div class="categoria" id="categoria_roupas">
+                    <!-- Imagem representativa da categoria Roupas -->
                     <img src="../assets/categorias/categoria_roupas.jpg" alt="Roupas">
+                    <!-- Conteúdo da categoria Roupas -->
                     <div class="conteudo">
+                        <!-- Título da categoria Roupas -->
                         <h1>ROUPAS</h1>
                     </div>
                 </div>
+
+                <!-- Categoria: Shapes -->
                 <div class="categoria" id="categoria_shapes">
+                    <!-- Imagem representativa da categoria Shapes -->
                     <img src="../assets/categorias/categoria_shapes.jpg" alt="Shapes">
+                    <!-- Conteúdo da categoria Shapes -->
                     <div class="conteudo">
+                        <!-- Título da categoria Shapes -->
                         <h1>SHAPES</h1>
                     </div>
                 </div>
+
+                <!-- Categoria: Tênis -->
                 <div class="categoria" id="categoria_tenis">
+                    <!-- Imagem representativa da categoria Tênis -->
                     <img src="../assets/categorias/categoria_tenis.jpg" alt="Tênis">
+                    <!-- Conteúdo da categoria Tênis -->
                     <div class="conteudo">
+                        <!-- Título da categoria Tênis -->
                         <h1>TÊNIS</h1>
                     </div>
                 </div>
+
+                <!-- Categoria: Bonés -->
                 <div class="categoria" id="categoria_bones">
+                    <!-- Imagem representativa da categoria Bonés -->
                     <img src="../assets/categorias/categoria_bones.jpg" alt="Bonés">
+                    <!-- Conteúdo da categoria Bonés -->
                     <div class="conteudo">
+                        <!-- Título da categoria Bonés -->
                         <h1>BONÉS</h1>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Seção de Filiais -->
         <section class="filiais">
+            <!-- Título da seção de filiais -->
             <h1>NOSSAS FILIAIS</h1>
+
             <!-- Container de filiais -->
             <div class="filiais-container">
-                <!-- Item de filial -->
+
+                <!-- Item da filial Curitiba -->
                 <div class="filiais-item">
+                    <!-- Imagem da filial Curitiba -->
                     <img src="../assets/filiais/filial_curitiba.webp" alt="Filiais Curitiba">
+                    <!-- Informações da filial Curitiba -->
                     <div class="filiais-info">
+                        <!-- Nome da filial Curitiba -->
                         <h3>Curitiba</h3>
+                        <!-- Endereço da filial Curitiba -->
                         <p>Avenida Cândido de Abreu, 776 - Centro Cívico, Curitiba - PR, 80530-000, Brasil</p>
                     </div>
                 </div>
-        
+
+                <!-- Item da filial São José dos Pinhais -->
                 <div class="filiais-item">
+                    <!-- Imagem da filial São José dos Pinhais -->
                     <img src="../assets/filiais/filial_são_josé_dos_pinhais.jpg" alt="Filiais São José dos Pinhais">
+                    <!-- Informações da filial São José dos Pinhais -->
                     <div class="filiais-info">
+                        <!-- Nome da filial São José dos Pinhais -->
                         <h3>São José dos Pinhais</h3>
+                        <!-- Endereço da filial São José dos Pinhais -->
                         <p>Rua XV de Novembro, 1755 - Centro, São José dos Pinhais - PR, 83005-000, Brasil</p>
                     </div>
                 </div>
-        
+
+                <!-- Item da filial Centro Cívico -->
                 <div class="filiais-item">
+                    <!-- Imagem da filial Centro Cívico -->
                     <img src="../assets/filiais/filial_centro_civico.webp" alt="Filiais Centro Cívico">
+                    <!-- Informações da filial Centro Cívico -->
                     <div class="filiais-info">
+                        <!-- Nome da filial Centro Cívico -->
                         <h3>Centro Cívico</h3>
+                        <!-- Endereço da filial Centro Cívico -->
                         <p>Rua Cândido Lopes, 102 - Centro Cívico, Curitiba - PR, 80530-000, Brasil</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
+        <!-- Inclusão do script JavaScript -->
         <script src="../javascript/script.js"></script>
     </body>
 </html>

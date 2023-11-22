@@ -1,77 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+    <!-- Configurações básicas do documento -->
     <head>
+        <!-- Definição da codificação de caracteres para UTF-8 -->
         <meta charset="UTF-8">
+
+        <!-- Configuração da viewport para suporte a dispositivos móveis -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título da página -->
         <title>Categoria Shapes</title>
 
+        <!-- Importação do arquivo CSS -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
+
+    <!-- Corpo da página -->
     <body>
+
+        <!-- Inclusão do arquivo de script JavaScript -->
         <script src="../javascript/script.js"></script>
-        <!-- Seção do header -->
+
+        <!-- Seção do cabeçalho -->
         <section class="cabeçalho">
             <!-- Navegação do site -->
             <nav>
+                <!-- Link da logo redirecionando para a página inicial -->
                 <a href="index.html"><img src="../assets/icons/logo.jpg"></a>
+
+                <!-- Barra de pesquisa -->
                 <div class="barra_de_pesquisa">
+                    <!-- Campo de entrada para pesquisa -->
                     <input type="text" placeholder="Pesquisar...">
+
+                    <!-- Botão de pesquisa -->
                     <button type="button">
-                        <img src="../assets/icons/lupa.png" alt="PERFIL">
+                        <!-- Ícone de lupa para indicar pesquisa -->
+                        <img src="../assets/icons/lupa.png" alt="ÍCONE DE PESQUISA">
                     </button>
                 </div>
+
+                <!-- Barra de navegação -->
                 <div class="barra_de_navegação">
                     <!-- Lista de links de navegação -->
                     <ul>
+                        <!-- Link para as categorias na página inicial -->
                         <li>
                             <a href="index.html#categorias">CATEGORIAS</a>
                         </li>
+                        <!-- Link para a página de login/cadastro -->
                         <li>
                             <a href="cadastro.login.html#login">
+                                <!-- Botão com ícone de usuário para perfil -->
                                 <button type="button">
-                                    <img src="../assets/icons/user.jpg" alt="PERFIL">
+                                    <img src="../assets/icons/user.jpg" alt="ÍCONE DE PERFIL">
                                 </button>
                             </a>
                         </li>
+                        <!-- Link para o carrinho de compras -->
                         <li>
                             <a href="carrinho_de_compras.html">
+                                <!-- Botão com ícone de carrinho de compras -->
                                 <button type="button">
-                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="CARRINHO">
+                                    <img src="../assets/icons/carrinho_de_compras.jpg" alt="ÍCONE DE CARRINHO">
                                 </button>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </section> 
+        </section>
         
+        <!-- Elemento de feedback na página, utilizado para exibir mensagens informativas ou de status -->
         <div id="feedback" class="feedback"></div>
 
+        <!-- Contêiner para os produtos de shapes -->
         <div class="container">
+            <!-- Produto 1: Shape Element Hatched Red Blue -->
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_element_hatched_red_blue.webp" alt="Produto 1">
                 <h2>SHAPE ELEMENT HATCHED RED BLUE</h2>
                 <p class="price">Preço: R$399,90</p>
                 <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE ELEMENT HATCHED RED BLUE', 399.90, '../assets/produtos/shapes/shape_element_hatched_red_blue.webp')">Comprar</button>
             </div>
+
+            <!-- Produto 2: Shape Element Garden Skeleton 8.0 -->
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_element_garden_skeleton_8.0.webp" alt="Produto 3">
                 <h2>SHAPE ELEMENT GARDEN SKELETON 8.0</h2>
                 <p class="price">Preço: R$419,90</p>
                 <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE ELEMENT GARDEN SKELETON 8.0', 419.90, '../assets/produtos/shapes/shape_element_garden_skeleton_8.0.webp')">Comprar</button>
             </div>
+
+            <!-- Produto 3: Shape Retta Skate Valorize Herval -->
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_retta_skate_valorize_herval.webp" alt="Produto 4">
                 <h2>SHAPE RETTA SKATE VALORIZE HERVAL</h2>
                 <p class="price">Preço: R$199,90</p>
                 <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE RETTA SKATE VALORIZE HERVAL', 199.90, '../assets/produtos/shapes/shape_retta_skate_valorize_herval.webp')">Comprar</button>
             </div>
+
+            <!-- Produto 4: Shape Primitive Dirty P Brasil -->
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_primitive_dirty_p_brasil.webp" alt="Produto 5">
                 <h2>SHAPE PRIMITIVE DIRTY P BRASIL</h2>
                 <p class="price">Preço: R$399,90</p>
                 <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE PRIMITIVE DIRTY P BRASIL', 399.90, '../assets/produtos/shapes/shape_primitive_dirty_p_brasil.webp')">Comprar</button>
             </div>
+
+            <!-- Produto 5: Shape High Beer 8.25 -->
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_high_beer_8.25.webp" alt="Produto 6">
                 <h2>SHAPE HIGH BEER 8.25</h2>
@@ -80,10 +117,14 @@
             </div>
         </div>
 
+        <!-- Inclusão do script JavaScript -->
         <script src="../javascript/script.js"></script>
 
+        <!-- Rodapé da página -->
         <footer>
+            <!-- Mensagem de direitos autorais com o ano e nome da loja -->
             <p>&copy; 2023 Minha Loja Online. Todos os direitos reservados.</p>
         </footer>
+
     </body>
 </html>

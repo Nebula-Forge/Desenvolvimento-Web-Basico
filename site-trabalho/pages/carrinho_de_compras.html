@@ -1,88 +1,133 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <!-- Configurações básicas do documento -->
     <head>
+        <!-- Definição da codificação de caracteres para UTF-8 -->
         <meta charset="UTF-8">
+
+        <!-- Configuração da viewport para suporte a dispositivos móveis -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Título da página -->
         <title>Carrinho de Compras</title>
-        
+
+        <!-- Importação do arquivo CSS -->
         <link rel="stylesheet" href="../css/style.css">
     </head>
+
     <body>
+        <!-- Seção do cabeçalho -->
         <section class="cabeçalho">
             <!-- Navegação do site -->
             <nav>
+                <!-- Link da logo redirecionando para a página inicial -->
                 <a href="index.html"><img src="../assets/icons/logo.jpg"></a>
+
+                <!-- Barra de pesquisa -->
                 <div class="barra_de_pesquisa">
+                    <!-- Campo de entrada para pesquisa -->
                     <input type="text" placeholder="Pesquisar...">
+
+                    <!-- Botão de pesquisa -->
                     <button type="button">
-                        <img src="../assets/icons/lupa.png" alt="PERFIL">
+                        <!-- Ícone de lupa para indicar pesquisa -->
+                        <img src="../assets/icons/lupa.png" alt="ÍCONE DE PESQUISA">
                     </button>
                 </div>
+
+                <!-- Barra de navegação -->
                 <div class="barra_de_navegação">
                     <!-- Lista de links de navegação -->
                     <ul>
+                        <!-- Link para as categorias na página inicial -->
                         <li>
                             <a href="index.html#categorias">CATEGORIAS</a>
                         </li>
+
+                        <!-- Link para a página de login/cadastro -->
                         <li>
                             <a href="cadastro.login.html#login">
+                                <!-- Botão com ícone de usuário para perfil -->
                                 <button type="button">
-                                    <img src="../assets/icons/user.jpg" alt="PERFIL">
+                                    <img src="../assets/icons/user.jpg" alt="ÍCONE DE PERFIL">
                                 </button>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </section> 
+        </section>
 
+        <!-- Seção do carrinho -->
         <div class="cart">
+            <!-- Cabeçalho do carrinho -->
             <div class="cart-header">
                 <h2>Itens no Carrinho</h2>
             </div>
-            
+
+            <!-- Botão para limpar o carrinho -->
             <a href="#" class="clear-cart-btn" onclick="limparCarrinho()">Limpar Carrinho</a>
+            
+            <!-- Feedback de itens adicionados ao carrinho -->
             <div id="feedback" class="added-to-cart"></div>
 
+            <!-- Área para exibir os itens do carrinho (serão adicionados dinamicamente) -->
             <div class="cart-items" id="cart-items">
                 <!-- Os itens do carrinho serão adicionados dinamicamente aqui -->
             </div>
+
+            <!-- Exibição do total do carrinho -->
             <div class="cart-total" id="cart-total">
                 Total: R$ 0,00
             </div>
-            <a href="#" class="checkout-btn">Finalizar Compra</a>
+
+            <!-- Botão para finalizar a compra -->
+            <a href="index.html" class="checkout-btn">Finalizar Compra</a>
         </div>
         
         <script>
+            // Função para limpar o carrinho
             function limparCarrinho() {
+                // Remover o carrinho do armazenamento local
                 localStorage.removeItem('carrinho');
 
-                // Remova os itens da visualização na página
+                // Remover os itens da visualização na página
                 var cartItemsContainer = document.getElementById('cart-items');
                 while (cartItemsContainer.firstChild) {
                     cartItemsContainer.removeChild(cartItemsContainer.firstChild);
                 }
 
-                // Atualize o total
+                // Atualizar o total
                 var cartTotal = document.getElementById('cart-total');
                 cartTotal.textContent = 'Total: R$ 0,00';
 
                 // Feedback visual
                 var feedback = document.getElementById('feedback');
                 feedback.textContent = 'Carrinho limpo.';
+                
+                // Limpar o feedback após 2 segundos
                 setTimeout(() => {
                     feedback.textContent = '';
                 }, 2000);
             }
+
             // Função para carregar os itens do carrinho na página do carrinho
             window.onload = function () {
+                // Obter os itens do carrinho do armazenamento local
                 var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+                // Elemento que conterá os itens do carrinho
                 var cartItemsContainer = document.getElementById('cart-items');
+
+                // Elemento que exibirá o total do carrinho
                 var cartTotal = document.getElementById('cart-total');
 
+                // Iterar sobre cada item no carrinho
                 carrinho.forEach(function (item) {
+                    // Criar um elemento para o item do carrinho
                     var itemElement = document.createElement('div');
                     itemElement.classList.add('item');
+                    // Preencher o elemento com os detalhes do item
                     itemElement.innerHTML = `
                         <img src="${item.imagem}" alt="${item.nome}">
                         <div class="item-details">
@@ -90,16 +135,19 @@
                             <div class="item-price">R$ ${item.preco.toFixed(2)}</div>
                         </div>
                     `;
+                    // Adicionar o elemento ao contêiner de itens do carrinho
                     cartItemsContainer.appendChild(itemElement);
                 });
 
-                // Calcular e exibir o total
+                // Calcular e exibir o total do carrinho
                 var total = carrinho.reduce(function (acc, item) {
                     return acc + item.preco;
                 }, 0);
 
+                // Atualizar o texto do elemento que exibe o total do carrinho
                 cartTotal.textContent = `Total: R$ ${total.toFixed(2)}`;
             };
         </script>
+
     </body>
 </html>
