@@ -290,6 +290,36 @@ nav img
 
 /* ---------------------------- INICIO PAGINAS CATEGORIAS  ------------------------------------- */
 
+.feedback {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.feedback.show {
+    opacity: 1;
+}.feedback {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.feedback.show {
+    opacity: 1;
+}
+
 body {
     background: #fff;
     font-family: 'Poppins', sans-serif;
@@ -335,6 +365,53 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.added-to-cart {
+    color: green;
+    margin-left: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.item-price {
+    color: #800080;
+}
+
+.buy-button {
+    background-color: #800080;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #5a005a;
 }
 
 /* ---------------------------- FIM DAS PÁGINAS CATEGORIAS ------------------------------------- */
@@ -396,80 +473,79 @@ footer {
 
 /* ---------------------------- INICIO DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */
 
-.carrinho_de_compras body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.carrinho_de_compras header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.carrinho_de_compras .cart {
+.cart {
     max-width: 600px;
     margin: 20px auto;
+    padding: 20px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 10px #555;
-    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.carrinho_de_compras .cart-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px; 
+.cart-header h2 {
+    color: #800080;
 }
 
-.carrinho_de_compras .cart-items {
-    padding: 20px;
-}
-
-.carrinho_de_compras .item {
+.cart-items {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.item {
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0; 
+    border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior entre os itens */
+    padding: 10px 180px;
 }
 
-.carrinho_de_compras .item img {
-    max-width: 50px;
-    margin-right: 10px; 
+.item img {
+    width: 80px; /* Ajuste conforme necessário */
+    height: 80px; /* Ajuste conforme necessário */
+    margin-right: 10px;
 }
 
-.carrinho_de_compras .item-name {
-    flex-grow: 1;
+.item-name,
+.item-price {
+    flex: 1;
 }
 
-.carrinho_de_compras .item-price {
-    font-weight: bold;
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #800080;
 }
 
-.carrinho_de_compras .cart-total {
-    text-align: right;
-    padding: 20px;
-    font-weight: bold;
-}
-
-.carrinho_de_compras .checkout-btn {
+.checkout-btn {
     display: block;
-    width: 100%;
-    padding: 20px;
-    background-color: #333;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #800080;
     color: #fff;
-    text-align: center;
     text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.carrinho_de_compras .checkout-btn:hover {
-    background-color: #555;
+.checkout-btn:hover {
+    background-color: #5a005a;
 }
+
+.clear-cart-btn {
+display: block;
+margin-top: 20px;
+padding: 10px;
+background-color: #800080;
+color: #fff;
+text-decoration: none;
+text-align: center;
+border-radius: 5px;
+}
+
+.clear-cart-btn:hover {
+    background-color: #5a005a;
+}
+
+
 
 /* ---------------------------- FIM DAS PÁGINA CARRINHO DE COMPRAS ------------------------------------- */

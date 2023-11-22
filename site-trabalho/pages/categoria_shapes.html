@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+        <script src="../javascript/script.js"></script>
         <!-- Seção do header -->
         <section class="cabeçalho">
             <!-- Navegação do site -->
@@ -44,38 +45,42 @@
             </nav>
         </section> 
         
+        <div id="feedback" class="feedback"></div>
+
         <div class="container">
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_element_hatched_red_blue.webp" alt="Produto 1">
                 <h2>SHAPE ELEMENT HATCHED RED BLUE</h2>
                 <p class="price">Preço: R$399,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE ELEMENT HATCHED RED BLUE', 399.90, '../assets/produtos/shapes/shape_element_hatched_red_blue.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_element_garden_skeleton_8.0.webp" alt="Produto 3">
                 <h2>SHAPE ELEMENT GARDEN SKELETON 8.0</h2>
                 <p class="price">Preço: R$419,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE ELEMENT GARDEN SKELETON 8.0', 419.90, '../assets/produtos/shapes/shape_element_garden_skeleton_8.0.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_retta_skate_valorize_herval.webp" alt="Produto 4">
                 <h2>SHAPE RETTA SKATE VALORIZE HERVAL</h2>
                 <p class="price">Preço: R$199,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE RETTA SKATE VALORIZE HERVAL', 199.90, '../assets/produtos/shapes/shape_retta_skate_valorize_herval.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_primitive_dirty_p_brasil.webp" alt="Produto 5">
                 <h2>SHAPE PRIMITIVE DIRTY P BRASIL</h2>
                 <p class="price">Preço: R$399,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE PRIMITIVE DIRTY P BRASIL', 399.90, '../assets/produtos/shapes/shape_primitive_dirty_p_brasil.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/shapes/shape_high_beer_8.25.webp" alt="Produto 6">
                 <h2>SHAPE HIGH BEER 8.25</h2>
                 <p class="price">Preço: R$419,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('SHAPE HIGH BEER 8.25', 419.90, '../assets/produtos/shapes/shape_high_beer_8.25.webp')">Comprar</button>
             </div>
         </div>
+
+        <script src="../javascript/script.js"></script>
 
         <footer>
             <p>&copy; 2023 Minha Loja Online. Todos os direitos reservados.</p>

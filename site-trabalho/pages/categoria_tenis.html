@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+        <script src="../javascript/script.js"></script>
         <!-- Seção do header -->
         <section class="cabeçalho">
             <!-- Navegação do site -->
@@ -16,8 +17,7 @@
                 <div class="barra_de_pesquisa">
                     <input type="text" placeholder="Pesquisar...">
                     <button type="button">
-                        <img src="../assets/icons/lupa.png" alt="PERFIL">
-                    </button>
+                        <img src="../assets/icons/lupa.png" alt="PERFIL"></button>
                 </div>
                 <div class="barra_de_navegação">
                     <!-- Lista de links de navegação -->
@@ -49,33 +49,35 @@
                 <img src="../assets/produtos/tênis/tenis_ous_imigrante_notorio_essencial.webp" alt="Produto 1">
                 <h2>TÊNIS ÖUS IMIGRANTE NOTORIO ESSENCIAL</h2>
                 <p class="price">Preço: R$439,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('TÊNIS ÖUS IMIGRANTE NOTORIO ESSENCIAL', 439.90, '../assets/produtos/tênis/tenis_ous_imigrante_notorio_essencial.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/tênis/tenis_tesla_coil_black_purple.webp" alt="Produto 3">
                 <h2>TÊNIS TESLA COIL BLACK PURPLE</h2>
                 <p class="price">Preço: R$379,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('TÊNIS TESLA COIL BLACK PURPLE', 379.90, '../assets/produtos/tênis/tenis_tesla_coil_black_purple.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/tênis/tenis_nike_sb_janoski_rm_orange_pearl.webp" alt="Produto 4">
                 <h2>TÊNIS NIKE SB JANOSKI RM ORANGE PEARL</h2>
                 <p class="price">Preço: R$259,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('TÊNIS NIKE SB JANOSKI RM ORANGE PEARL', 259.90, '../assets/produtos/tênis/tenis_nike_sb_janoski_rm_orange_pearl.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/tênis/tenis_dc_aw_manual_rt_s_brick.webp" alt="Produto 5">
                 <h2>TÊNIS DC AW MANUAL RT S BRICK</h2>
                 <p class="price">Preço: RR$359,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('TÊNIS DC AW MANUAL RT S BRICK', 359.90, '../assets/produtos/tênis/tenis_dc_aw_manual_rt_s_brick.webp')">Comprar</button>
             </div>
             <div class="product">
                 <img src="../assets/produtos/tênis/tenis_vans_old_school_pro_blackwhite.webp" alt="Produto 6">
                 <h2>TÊNIS VANS OLD SCHOOL PRO BLACK / WHITE</h2>
                 <p class="price">Preço: RR$449,90</p>
-                <button class="buy-button">Comprar</button>
+                <button class="buy-button" onclick="adicionarAoCarrinho('TÊNIS VANS OLD SCHOOL PRO BLACK / WHITE', 449.90, '../assets/produtos/tênis/tenis_vans_old_school_pro_blackwhite.webp')">Comprar</button>
             </div>
         </div>
+
+        <script src="../javascript/script.js"></script>
 
         <footer>
             <p>&copy; 2023 Minha Loja Online. Todos os direitos reservados.</p>

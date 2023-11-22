@@ -99,3 +99,66 @@ function calcularTotal() {
   // Atualizar o elemento com a classe "cart-total"
   document.querySelector(".cart-total").textContent = "Total: R$ " + total.toFixed(2);
 }
+
+function exibirCarrinho() {
+  var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  var cartItemsElement = document.getElementById('cart-items');
+  var cartTotalElement = document.getElementById('cart-total');
+
+  // Limpe o conteúdo atual do carrinho
+  cartItemsElement.innerHTML = '';
+
+  // Adicione cada item ao carrinho
+  carrinho.forEach(function (item) {
+      var itemElement = document.createElement('div');
+      itemElement.innerHTML = `
+          <div class="item">
+              <img src="${item.imagem}" alt="${item.nome}">
+              <div class="item-details">
+                  <div class="item-name">${item.nome}</div>
+                  <div class="item-price">R$ ${item.preco.toFixed(2)}</div>
+              </div>
+          </div>
+      `;
+      cartItemsElement.appendChild(itemElement);
+  });
+
+  // Calcule o total do carrinho
+  var total = carrinho.reduce(function (acc, item) {
+      return acc + item.preco;
+  }, 0);
+
+  // Atualize o total no carrinho
+  cartTotalElement.textContent = `Total: R$ ${total.toFixed(2)}`;
+}
+
+/* -------------------------- PÁGINAS DE PRODUTOS -------------------------- */
+
+function adicionarAoCarrinho(nomeItem, precoItem, imagemItem) {
+  var item = {
+      nome: nomeItem,
+      preco: precoItem,
+      imagem: imagemItem
+  };
+
+  var carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  carrinho.push(item);
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+  // Feedback visual no topo da página
+  var feedback = document.getElementById('feedback');
+  feedback.textContent = `${nomeItem} adicionado ao carrinho.`;
+  feedback.classList.add('show');
+
+  setTimeout(() => {
+      feedback.classList.remove('show');
+      feedback.textContent = '';
+  }, 2000);
+}
+
+item.classList.add('item-added');
+
+// Remova a classe após a animação (depois de 1 segundo neste exemplo)
+setTimeout(() => {
+    item.classList.remove('item-added');
+}, 1000);
